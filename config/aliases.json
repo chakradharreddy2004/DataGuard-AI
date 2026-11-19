@@ -1,0 +1,47 @@
+{
+  "cities": {
+    "nyc": "New York",
+    "new york city": "New York",
+    "ny": "New York",
+    "sf": "San Francisco",
+    "san fran": "San Francisco",
+    "la": "Los Angeles",
+    "l.a.": "Los Angeles",
+    "bangalore": "Bengaluru",
+    "banglore": "Bengaluru",
+    "bengaluru": "Bengaluru",
+    "bombay": "Mumbai",
+    "mumbai": "Mumbai",
+    "calcutta": "Kolkata",
+    "kolkata": "Kolkata",
+    "madras": "Chennai",
+    "chennai": "Chennai",
+    "delhi": "New Delhi",
+    "new delhi": "New Delhi",
+    "gurgaon": "Gurugram",
+    "gurugram": "Gurugram",
+    "mysore": "Mysuru",
+    "mysuru": "Mysuru"
+  },
+  "status_codes": {
+    "act": "ACTIVE",
+    "active": "ACTIVE",
+    "inact": "INACTIVE",
+    "inactive": "INACTIVE",
+    "pend": "PENDING",
+    "pending": "PENDING",
+    "canc": "CANCELLED",
+    "cancelled": "CANCELLED",
+    "canceled": "CANCELLED"
+  },
+  "boolean_flags": {
+    "y": "TRUE",
+    "yes": "TRUE",
+    "true": "TRUE",
+    "1": "TRUE",
+    "n": "FALSE",
+    "no": "FALSE",
+    "false": "FALSE",
+    "0": "FALSE"
+  }
+}
