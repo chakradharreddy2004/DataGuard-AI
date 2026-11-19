@@ -13,7 +13,7 @@
 
 - **⚡ Blazing Fast Deterministic Core**: Profiles, detects anomalies, and computes DAMA quality scores across **10,000 rows in under 5.0 seconds** purely using Pandas & NumPy.
 - **🔄 Multi-Provider LLM Architecture with Transparent Failover**:
-  - **Primary**: Google Gemini API (`gemini-2.5-flash`).
+  - **Primary**: Google Gemini API (`gemini-3.5-flash-lite`).
   - **Secondary**: Groq SDK (`openai/gpt-oss-120b`).
   - **Deterministic Fallback**: Rule-based Python template engine guaranteeing 100% application uptime with zero active LLMs.
 - **🔒 Privacy Boundary (Zero Raw CSV Leakage)**: Strictly transmits column metadata summaries and a maximum of 5 distinct sanitized samples to external LLMs. Full datasets never leave the local environment.
@@ -43,7 +43,7 @@ flowchart TD
     
     subgraph MultiProviderAI ["Multi-Provider AI Layer (Metadata Only)"]
         Sanitizer[Privacy Payload Sanitizer: Max 5 Samples] --> LLMManager[LLM Provider Manager]
-        LLMManager -->|Primary| Gemini[Gemini 2.5 Flash]
+        LLMManager -->|Primary| Gemini[Gemini 3.5 Flash Lite]
         LLMManager -->|Failover on 429/5xx/Timeout| Groq[Groq: openai/gpt-oss-120b]
         LLMManager -->|Dual Outage Fallback| Templates[Deterministic Python Templates]
     end
@@ -125,7 +125,7 @@ Edit `.env`:
 ```ini
 # Primary Provider: Google Gemini
 GEMINI_API_KEY=your_gemini_api_key_here
-GEMINI_MODEL=gemini-2.5-flash
+GEMINI_MODEL=gemini-3.5-flash-lite
 
 # Secondary Provider: Groq
 GROQ_API_KEY=your_groq_api_key_here

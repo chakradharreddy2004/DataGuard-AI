@@ -182,7 +182,7 @@ class AIExplanation:
     recommended_fix: str
     suggested_python_code: str
     provider_source: ProviderSource = ProviderSource.GEMINI
-    model_name: str = "gemini-2.5-flash"
+    model_name: str = "gemini-3.5-flash-lite"
     is_fallback: bool = False
 
 # ---------------------------------------------------------------------------
